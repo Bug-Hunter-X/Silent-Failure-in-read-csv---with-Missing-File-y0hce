@@ -1,0 +1,2 @@
+# Silent Failure in R's read.csv() Function
+This repository demonstrates a common, yet easily overlooked, error in R: the silent failure of `read.csv()` when the specified file does not exist.  The code in `bug.R` attempts to read a CSV file. If the file is missing, `read.csv()` doesn't throw an error; instead, it silently returns an error, which can lead to unexpected behavior and difficult debugging later in the code.  The solution, shown in `bugSolution.R`, uses `tryCatch()` to gracefully handle this situation and provide informative error messages.
